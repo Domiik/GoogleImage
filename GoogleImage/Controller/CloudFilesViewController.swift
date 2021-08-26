@@ -93,7 +93,7 @@ extension CloudFilesViewController: UITableViewDelegate, UITableViewDataSource, 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "imageVC" {
             if let indexPaths = tableViewFiles.indexPathForSelectedRow?.item {
-                let destinationController = segue.destination as! ImageViewController
+                let destinationController = segue.destination as! ImageDrawViewController
                 destinationController.imageName = nameImage
                 destinationController.modalPresentationStyle = .fullScreen
             }
