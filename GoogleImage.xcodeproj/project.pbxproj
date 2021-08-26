@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,13 @@
 		623DE7E726D3817900676A5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 623DE7E526D3817900676A5F /* Main.storyboard */; };
 		623DE7E926D3817A00676A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 623DE7E826D3817A00676A5F /* Assets.xcassets */; };
 		623DE7EC26D3817A00676A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 623DE7EA26D3817A00676A5F /* LaunchScreen.storyboard */; };
+		62AA13B426D60EA7001A3AB2 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA13B326D60EA7001A3AB2 /* ImageViewController.swift */; };
+		62AF52ED26D3C7B100256E32 /* CloudFilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF52EC26D3C7B100256E32 /* CloudFilesViewController.swift */; };
+		62AF52EF26D3C82F00256E32 /* CloudFileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF52EE26D3C82F00256E32 /* CloudFileTableCell.swift */; };
+		62AF52F126D3C8F000256E32 /* CloudFileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62AF52F026D3C8F000256E32 /* CloudFileTableCell.xib */; };
+		62AF52F326D3C96B00256E32 /* CloudFilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF52F226D3C96B00256E32 /* CloudFilesManager.swift */; };
+		62AF52F526D3CB4F00256E32 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF52F426D3CB4F00256E32 /* Alerts.swift */; };
+		7CA9C99C292FD948C50EA606 /* Pods_GoogleImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE1A725FB6832DE81A543FCA /* Pods_GoogleImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,15 @@
 		623DE7E826D3817A00676A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		623DE7EB26D3817A00676A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		623DE7ED26D3817A00676A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62AA13B326D60EA7001A3AB2 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		62AF52EC26D3C7B100256E32 /* CloudFilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFilesViewController.swift; sourceTree = "<group>"; };
+		62AF52EE26D3C82F00256E32 /* CloudFileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFileTableCell.swift; sourceTree = "<group>"; };
+		62AF52F026D3C8F000256E32 /* CloudFileTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CloudFileTableCell.xib; sourceTree = "<group>"; };
+		62AF52F226D3C96B00256E32 /* CloudFilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFilesManager.swift; sourceTree = "<group>"; };
+		62AF52F426D3CB4F00256E32 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		90EA2A4ADE88094FD8683FE5 /* Pods-GoogleImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleImage.release.xcconfig"; path = "Target Support Files/Pods-GoogleImage/Pods-GoogleImage.release.xcconfig"; sourceTree = "<group>"; };
+		BEC385E2F3EFEC5952D59301 /* Pods-GoogleImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleImage.debug.xcconfig"; path = "Target Support Files/Pods-GoogleImage/Pods-GoogleImage.debug.xcconfig"; sourceTree = "<group>"; };
+		EE1A725FB6832DE81A543FCA /* Pods_GoogleImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CA9C99C292FD948C50EA606 /* Pods_GoogleImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13E9E1C87CCF0A6C80144031 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEC385E2F3EFEC5952D59301 /* Pods-GoogleImage.debug.xcconfig */,
+				90EA2A4ADE88094FD8683FE5 /* Pods-GoogleImage.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3B1CC864FA26BFCD37CF3498 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE1A725FB6832DE81A543FCA /* Pods_GoogleImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		623DE7D326D3817900676A5F = {
 			isa = PBXGroup;
 			children = (
 				623DE7DE26D3817900676A5F /* GoogleImage */,
 				623DE7DD26D3817900676A5F /* Products */,
+				13E9E1C87CCF0A6C80144031 /* Pods */,
+				3B1CC864FA26BFCD37CF3498 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +92,37 @@
 		623DE7DE26D3817900676A5F /* GoogleImage */ = {
 			isa = PBXGroup;
 			children = (
+				62AF52F726D3CCA100256E32 /* Controller */,
+				62AF52F626D3CC7A00256E32 /* CloudFileTableCell */,
 				623DE7DF26D3817900676A5F /* AppDelegate.swift */,
 				623DE7E126D3817900676A5F /* SceneDelegate.swift */,
-				623DE7E326D3817900676A5F /* ViewController.swift */,
 				623DE7E526D3817900676A5F /* Main.storyboard */,
 				623DE7E826D3817A00676A5F /* Assets.xcassets */,
 				623DE7EA26D3817A00676A5F /* LaunchScreen.storyboard */,
 				623DE7ED26D3817A00676A5F /* Info.plist */,
+				62AF52F226D3C96B00256E32 /* CloudFilesManager.swift */,
+				62AF52F426D3CB4F00256E32 /* Alerts.swift */,
 			);
 			path = GoogleImage;
+			sourceTree = "<group>";
+		};
+		62AF52F626D3CC7A00256E32 /* CloudFileTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				62AF52EE26D3C82F00256E32 /* CloudFileTableCell.swift */,
+				62AF52F026D3C8F000256E32 /* CloudFileTableCell.xib */,
+			);
+			path = CloudFileTableCell;
+			sourceTree = "<group>";
+		};
+		62AF52F726D3CCA100256E32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				623DE7E326D3817900676A5F /* ViewController.swift */,
+				62AF52EC26D3C7B100256E32 /* CloudFilesViewController.swift */,
+				62AA13B326D60EA7001A3AB2 /* ImageViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +132,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 623DE7F026D3817A00676A5F /* Build configuration list for PBXNativeTarget "GoogleImage" */;
 			buildPhases = (
+				FD4A106A197184B23164B706 /* [CP] Check Pods Manifest.lock */,
 				623DE7D826D3817900676A5F /* Sources */,
 				623DE7D926D3817900676A5F /* Frameworks */,
 				623DE7DA26D3817900676A5F /* Resources */,
+				4AF519817E6085936A215F18 /* [CP] Embed Pods Frameworks */,
+				8114DEAB348BF2EE25069E44 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,11 +187,71 @@
 			files = (
 				623DE7EC26D3817A00676A5F /* LaunchScreen.storyboard in Resources */,
 				623DE7E926D3817A00676A5F /* Assets.xcassets in Resources */,
+				62AF52F126D3C8F000256E32 /* CloudFileTableCell.xib in Resources */,
 				623DE7E726D3817900676A5F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AF519817E6085936A215F18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoogleImage/Pods-GoogleImage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoogleImage/Pods-GoogleImage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoogleImage/Pods-GoogleImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8114DEAB348BF2EE25069E44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoogleImage/Pods-GoogleImage-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoogleImage/Pods-GoogleImage-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoogleImage/Pods-GoogleImage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4A106A197184B23164B706 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoogleImage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		623DE7D826D3817900676A5F /* Sources */ = {
@@ -138,8 +259,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				623DE7E426D3817900676A5F /* ViewController.swift in Sources */,
+				62AF52EF26D3C82F00256E32 /* CloudFileTableCell.swift in Sources */,
 				623DE7E026D3817900676A5F /* AppDelegate.swift in Sources */,
+				62AF52ED26D3C7B100256E32 /* CloudFilesViewController.swift in Sources */,
 				623DE7E226D3817900676A5F /* SceneDelegate.swift in Sources */,
+				62AF52F526D3CB4F00256E32 /* Alerts.swift in Sources */,
+				62AA13B426D60EA7001A3AB2 /* ImageViewController.swift in Sources */,
+				62AF52F326D3C96B00256E32 /* CloudFilesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +409,7 @@
 		};
 		623DE7F126D3817A00676A5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEC385E2F3EFEC5952D59301 /* Pods-GoogleImage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +429,7 @@
 		};
 		623DE7F226D3817A00676A5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90EA2A4ADE88094FD8683FE5 /* Pods-GoogleImage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
