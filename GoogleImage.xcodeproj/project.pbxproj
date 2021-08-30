@@ -13,8 +13,7 @@
 		623DE7E726D3817900676A5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 623DE7E526D3817900676A5F /* Main.storyboard */; };
 		623DE7E926D3817A00676A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 623DE7E826D3817A00676A5F /* Assets.xcassets */; };
 		623DE7EC26D3817A00676A5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 623DE7EA26D3817A00676A5F /* LaunchScreen.storyboard */; };
-		62A6217C26D7B40700BB2B14 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A6217B26D7B40700BB2B14 /* ImageScrollView.swift */; };
-		62A6217E26D7B47000BB2B14 /* ImageDrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A6217D26D7B47000BB2B14 /* ImageDrawViewController.swift */; };
+		627DC0F126DCE30C00824341 /* DrawCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627DC0F026DCE30C00824341 /* DrawCircle.swift */; };
 		62AA13B426D60EA7001A3AB2 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA13B326D60EA7001A3AB2 /* ImageViewController.swift */; };
 		62AF52ED26D3C7B100256E32 /* CloudFilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF52EC26D3C7B100256E32 /* CloudFilesViewController.swift */; };
 		62AF52EF26D3C82F00256E32 /* CloudFileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF52EE26D3C82F00256E32 /* CloudFileTableCell.swift */; };
@@ -33,8 +32,7 @@
 		623DE7E826D3817A00676A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		623DE7EB26D3817A00676A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		623DE7ED26D3817A00676A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62A6217B26D7B40700BB2B14 /* ImageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
-		62A6217D26D7B47000BB2B14 /* ImageDrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDrawViewController.swift; sourceTree = "<group>"; };
+		627DC0F026DCE30C00824341 /* DrawCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawCircle.swift; sourceTree = "<group>"; };
 		62AA13B326D60EA7001A3AB2 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		62AF52EC26D3C7B100256E32 /* CloudFilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFilesViewController.swift; sourceTree = "<group>"; };
 		62AF52EE26D3C82F00256E32 /* CloudFileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFileTableCell.swift; sourceTree = "<group>"; };
@@ -96,6 +94,7 @@
 		623DE7DE26D3817900676A5F /* GoogleImage */ = {
 			isa = PBXGroup;
 			children = (
+				627DC0EF26DCE2EB00824341 /* Model */,
 				62AF52F726D3CCA100256E32 /* Controller */,
 				62AF52F626D3CC7A00256E32 /* CloudFileTableCell */,
 				623DE7DF26D3817900676A5F /* AppDelegate.swift */,
@@ -108,6 +107,14 @@
 				62AF52F426D3CB4F00256E32 /* Alerts.swift */,
 			);
 			path = GoogleImage;
+			sourceTree = "<group>";
+		};
+		627DC0EF26DCE2EB00824341 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				627DC0F026DCE30C00824341 /* DrawCircle.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		62AF52F626D3CC7A00256E32 /* CloudFileTableCell */ = {
@@ -123,10 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				623DE7E326D3817900676A5F /* ViewController.swift */,
-				62A6217B26D7B40700BB2B14 /* ImageScrollView.swift */,
 				62AF52EC26D3C7B100256E32 /* CloudFilesViewController.swift */,
 				62AA13B326D60EA7001A3AB2 /* ImageViewController.swift */,
-				62A6217D26D7B47000BB2B14 /* ImageDrawViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,13 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627DC0F126DCE30C00824341 /* DrawCircle.swift in Sources */,
 				623DE7E426D3817900676A5F /* ViewController.swift in Sources */,
 				62AF52EF26D3C82F00256E32 /* CloudFileTableCell.swift in Sources */,
 				623DE7E026D3817900676A5F /* AppDelegate.swift in Sources */,
-				62A6217C26D7B40700BB2B14 /* ImageScrollView.swift in Sources */,
 				62AF52ED26D3C7B100256E32 /* CloudFilesViewController.swift in Sources */,
 				623DE7E226D3817900676A5F /* SceneDelegate.swift in Sources */,
-				62A6217E26D7B47000BB2B14 /* ImageDrawViewController.swift in Sources */,
 				62AF52F526D3CB4F00256E32 /* Alerts.swift in Sources */,
 				62AA13B426D60EA7001A3AB2 /* ImageViewController.swift in Sources */,
 				62AF52F326D3C96B00256E32 /* CloudFilesManager.swift in Sources */,
