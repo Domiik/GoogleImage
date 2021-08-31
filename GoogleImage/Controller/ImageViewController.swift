@@ -10,6 +10,11 @@ import Kingfisher
 
 class ImageViewController: UIViewController {
     
+   
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    private var initialCenter: CGPoint = .zero
+    
     public var imageName: String!
     var lastPoint = CGPoint.zero
     var swiped = false
@@ -18,11 +23,7 @@ class ImageViewController: UIViewController {
     var opacity: CGFloat = 1.0
     var notScroll = false
     var i = 0
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var scrollView: UIScrollView!
-    private var initialCenter: CGPoint = .zero
-
-    
+    var myView: DrawCircles!
     
     private let pannableView: UIView = {
         // Initialize View
@@ -32,7 +33,7 @@ class ImageViewController: UIViewController {
         // Configure View
         view.backgroundColor = .blue
         view.translatesAutoresizingMaskIntoConstraints = false
-        
+        view.layer.cornerRadius = 50
         return view
     }()
     
@@ -44,9 +45,11 @@ class ImageViewController: UIViewController {
         
         pannableView.center = imageView.center
 
+        myView = DrawCircles(frame: CGRect(x: imageView.center.x, y: imageView.center.y, width: 70, height: 70))
+        
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
         pannableView.isUserInteractionEnabled = true
-        pannableView.addGestureRecognizer(panGestureRecognizer)
+        myView.addGestureRecognizer(panGestureRecognizer)
         // Do any additional setup after loading the view.
         scrollView.maximumZoomScale = 4
         scrollView.minimumZoomScale = 1
@@ -56,14 +59,14 @@ class ImageViewController: UIViewController {
     
     
     @IBAction func drawCircle(_ sender: Any) {
-        imageView.addSubview(pannableView)
-       
+        
+        imageView.addSubview(myView)
     }
     
     @objc private func didPan(_ sender: UIPanGestureRecognizer) {
-        imageView.bringSubviewToFront(pannableView)
+        imageView.bringSubviewToFront(myView)
         let translation = sender.translation(in: self.imageView)
-        pannableView.center = CGPoint(x: pannableView.center.x + translation.x , y: pannableView.center.y + translation.y)
+        myView.center = CGPoint(x: myView.center.x + translation.x , y: myView.center.y + translation.y)
         sender.setTranslation(CGPoint.zero, in: self.imageView)
     }
     
